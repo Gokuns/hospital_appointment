@@ -5,6 +5,8 @@ import com.yp.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import springfox.documentation.annotations.Cacheable;
+
 import java.util.List;
 import java.util.Set;
 
@@ -18,11 +20,14 @@ public class PatientController {
     @Autowired
     private PatientService patientService;
 
+    @Cacheable("patient")
     @PreAuthorize("hasAuthority('PATIENT')")
     @GetMapping("/{id}")
     public Patient getPatientWithId(@PathVariable(value = "id") String id){
         return patientService.getPatientWithId(id);
     }
+
+    @Cacheable("hospitals")
     @PreAuthorize("hasAuthority('PATIENT')")
     @GetMapping("/hospitals")
     public List<Hospital> getHospitals(){
@@ -33,6 +38,7 @@ public class PatientController {
     public Set<Unit> getUnitsFromHospitalId(@RequestParam("hospitalId") Long id){
         return patientService.getUnitsFromHospitalId(id);
     }
+
     @PreAuthorize("hasAuthority('PATIENT')")
     @GetMapping("/doctors")
     public List<Doctor> getDoctorsFromHospitalIdAndUnitId(@RequestParam("hospitalId") Long hospitalId, @RequestParam("unitId") Long unitId){

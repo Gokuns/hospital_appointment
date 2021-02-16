@@ -23,6 +23,4 @@ public class Patient extends BaseEntity{
     @Column(name = "ENABLED")
     private boolean enabled;
 
-
-
 }

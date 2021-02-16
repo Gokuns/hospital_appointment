@@ -1,0 +1,10 @@
+
+Rjavascript:S1481"9Remove the declaration of the unused 'setUnits' variable.(æ€Á)
+Rjavascript:S1481"8Remove the declaration of the unused 'doctors' variable.(ƒ²“Ÿ
+Ojavascript:S1854"6Remove this useless assignment to variable "setUnits".(æ€Á)
+Ojavascript:S1854"5Remove this useless assignment to variable "doctors".(ƒ²“Ÿ
+Hjavascript:S1481"/Remove unused function 'createHospitalOptions'.(»ùøD
+Rjavascript:S1854"8Remove this useless assignment to variable "setDoctors".(ƒ²“Ÿ
+Ujavascript:S1481";Remove the declaration of the unused 'setDoctors' variable.(ƒ²“Ÿ
+Pjavascript:S1481"6Remove the declaration of the unused 'times' variable.(è§î•
+Mjavascript:S1854"3Remove this useless assignment to variable "times".(è§î•

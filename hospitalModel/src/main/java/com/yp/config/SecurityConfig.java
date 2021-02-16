@@ -19,7 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("h2-console/**").permitAll();
         http.authorizeRequests().antMatchers("swagger-ui.html/**").permitAll();
 
-        http.authorizeRequests().antMatchers("/patient/**").access("hasAnyRole('PATIENT',  'USER')");
+        //http.authorizeRequests().antMatchers("/patient/**").access("hasAnyRole('PATIENT',  'USER')");
 
         http.csrf().disable();
         http.headers().frameOptions().disable();
